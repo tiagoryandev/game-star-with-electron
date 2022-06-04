@@ -14,7 +14,7 @@ const createWindow = () => {
         resizable: false
     });
 
-    win.loadFile(path.resolve(__dirname, "src", "index.html"));
+    win.loadFile(path.resolve(__dirname, "index.html"));
 };
 
 app.whenReady().then(() => {
