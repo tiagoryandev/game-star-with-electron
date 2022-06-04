@@ -42,9 +42,20 @@ html, body {
 }
 
 .player {
+    position: relative;
     background-image: url(../assets/char.png);
     background-size: cover;
     transition: top 0.2s linear, left 0.2s linear;
+}
+
+.player.get-point::before {
+    content: "+";
+    position: absolute;
+    left: 4px;
+    font-weight: bold;
+    font-size: 30px;
+    color: blue;
+    animation: GetPoint 0.3s linear infinite;
 }
 
 .point {
@@ -89,5 +100,16 @@ html, body {
     }
     to {
         right: 150%;
+    }
+}
+
+@keyframes GetPoint {
+    from {
+        top: 0px;
+        opacity: 0;
+    }
+    to {
+        top: -30px;
+        opacity: 1;
     }
 }

@@ -36,10 +36,14 @@ const insertPointOnDisplay = () => {
 const checkIsPlayerTakePoint = () => {
     if (playerData.positionX === playerData.points.positionX &&
         playerData.positionY === playerData.points.positionY) {
+        player.classList.add("get-point");
+
+        setTimeout(() => player.classList.remove("get-point"), 300);
+        
         playerData.points.counter++;
         playerData.points.positionX = Math.floor(Math.random() * 14) + 1;
         playerData.points.positionY = Math.floor(Math.random() * 14) + 1;
-    };
+    }
 }
 
 document.addEventListener("keydown", event => {
