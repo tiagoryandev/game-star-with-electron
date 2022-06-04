@@ -1,0 +1,19 @@
+{
+  "name": "game-star",
+  "version": "1.0.0",
+  "description": "Jogo de Pegar estrelas usando HTML, CSS, JavaScript no ElectronJS.",
+  "main": "./main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "game",
+    "electron"
+  ],
+  "author": "Tiago Ryan <tiagoinsany@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^19.0.3",
+    "electron-reloader": "^1.2.3"
+  }
+}

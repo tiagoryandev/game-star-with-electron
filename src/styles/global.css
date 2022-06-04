@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    background-color: #121212;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter-points {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.display {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-image: url(../assets/gardem.jpg);
+    background-size: 50%;
+    outline: green solid 5px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.player, .point {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    z-index: 1000;
+}
+
+.player {
+    background-image: url(../assets/char.png);
+    background-size: cover;
+    transition: top 0.2s linear, left 0.2s linear;
+}
+
+.point {
+    background-image: url(../assets/star-point.jpg);
+    background-size: cover;
+    z-index: 500;
+}
+
+.cloud {
+    position: absolute;
+    z-index: 1500;
+    width: 150px;
+    height: 50px;
+    background-size: cover;
+    background-image: url(../assets/cloud.png);
+    opacity: 0.5;
+}
+
+.cloud.p1 {
+    top: 30px;
+    animation: MoveCloud 5s linear infinite;
+}
+
+.cloud.p2 {
+    top: 70px;
+    animation: MoveCloud 4s linear infinite;
+}
+
+.cloud.p3 {
+    top: 240px;
+    animation: MoveCloud 6s linear infinite;
+}
+
+.cloud.p4 {
+    top: 300px;
+    animation: MoveCloud 3s linear infinite;
+}
+
+@keyframes MoveCloud {
+    from {
+        right: -50%;
+    }
+    to {
+        right: 150%;
+    }
+}
